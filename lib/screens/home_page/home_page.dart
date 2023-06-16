@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/screens/home_page/components/food_list_page.dart';
+import 'package:food/screens/navigation_bar/navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,13 +33,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          //AnimSearch(textController),
-          //second part
-          //const AnimText(),
           //nav bar
           Expanded(
             child: TweenAnimationBuilder(
-              duration: const Duration(milliseconds: 900),
+              duration: const Duration(milliseconds: 300),
               tween: Tween<double>(begin: 0, end: 1),
               builder: (context, double value, Widget? child) {
                 return Opacity(
@@ -255,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   if (selectedIndex == 0)
@@ -274,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   //pasta
@@ -296,7 +294,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   if (selectedIndex == 1)
@@ -315,7 +313,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   //sushi
@@ -337,7 +335,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   if (selectedIndex == 2)
@@ -356,7 +354,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   //cold drinks
@@ -378,7 +376,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   if (selectedIndex == 3)
@@ -397,7 +395,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   //hot drinks
@@ -419,7 +417,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                   if (selectedIndex == 4)
@@ -438,7 +436,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      duration: const Duration(milliseconds: 900),
+                      duration: const Duration(milliseconds: 300),
                       tween: Tween<double>(begin: 0, end: 1),
                     ),
                 ],
@@ -446,6 +444,9 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: const NavigationBarPage(
+        index: 1,
       ),
     );
   }

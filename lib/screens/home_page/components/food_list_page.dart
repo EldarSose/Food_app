@@ -18,7 +18,7 @@ class FoodList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 450,
+      height: 385,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -35,7 +35,6 @@ class FoodList extends StatelessWidget {
             child: Hero(
               tag: firstTitle.toLowerCase(),
               child: Container(
-                height: 500,
                 width: 270,
                 decoration: BoxDecoration(
                   border: Border.all(
