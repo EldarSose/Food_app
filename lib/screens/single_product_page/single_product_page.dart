@@ -1,23 +1,17 @@
-// ignore: unused_import
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:food/UI/single_product/hamburger/components/buttons.dart';
-import 'package:food/UI/single_product/hamburger/components/hamburger_top.dart';
+import 'package:food/screens/single_product_page/components/close_ordering_buttons.dart';
+import 'package:food/screens/single_product_page/components/single_product_page_top.dart';
 
-class Hamburger extends StatefulWidget {
+class SingleProductPage extends StatefulWidget {
   final String text;
   final String price;
-  const Hamburger(this.text, this.price, {super.key});
+  const SingleProductPage({required this.text, required this.price, super.key});
 
   @override
-  // ignore: no_logic_in_create_state
-  State<Hamburger> createState() => _HamburgerState(text, price);
+  State<SingleProductPage> createState() => _SingleProductPageState();
 }
 
-class _HamburgerState extends State<Hamburger> {
-  final String text;
-  final String price;
-  _HamburgerState(this.text, this.price);
+class _SingleProductPageState extends State<SingleProductPage> {
   String size = "m";
 
   @override
@@ -25,11 +19,9 @@ class _HamburgerState extends State<Hamburger> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 243, 241, 241),
       body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
         child: Column(
           children: [
-            HamburgerTop(text, price),
+            SingleProductPageTop(text: widget.text, price: widget.price),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -182,7 +174,7 @@ class _HamburgerState extends State<Hamburger> {
                             : 110,
                     duration: const Duration(milliseconds: 300),
                     child: Image.asset(
-                        "assets/${widget.text.toLowerCase()}Transparent.jpeg"),
+                        "assets/images/${widget.text.toLowerCase()}Transparent.jpeg"),
                   ),
                 ),
                 //end of hamburger sizing

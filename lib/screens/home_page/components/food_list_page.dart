@@ -1,20 +1,24 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:food/UI/single_product/hamburger/hamburger.dart';
+import 'package:food/screens/single_product_page/single_product_page.dart';
 
-class FastFood extends StatelessWidget {
-  final String text1;
-  final String text2;
-  final String price1;
-  final String price2;
-  const FastFood(this.text1, this.text2, this.price1, this.price2, {super.key});
+class FoodList extends StatelessWidget {
+  final String firstTitle;
+  final String secondTitle;
+  final String firstPrice;
+  final String secondPrice;
+  const FoodList(
+      {required this.firstTitle,
+      required this.secondTitle,
+      required this.firstPrice,
+      required this.secondPrice,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.65,
-      width: MediaQuery.of(context).size.width * 0.9,
+      height: 450,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -23,22 +27,24 @@ class FastFood extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => Hamburger(text1, price1)),
+                    builder: (context) =>
+                        SingleProductPage(text: firstTitle, price: firstPrice)),
               );
             },
             borderRadius: BorderRadius.circular(50),
             child: Hero(
-              tag: text1.toLowerCase(),
+              tag: firstTitle.toLowerCase(),
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.6,
-                width: MediaQuery.of(context).size.width * 0.6,
+                height: 500,
+                width: 270,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.black,
                   ),
                   borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
-                    image: AssetImage("assets/${text1.toLowerCase()}.jpeg"),
+                    image: AssetImage(
+                        "assets/images/${firstTitle.toLowerCase()}.jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -60,7 +66,7 @@ class FastFood extends StatelessWidget {
                             child: Material(
                               type: MaterialType.transparency,
                               child: Text(
-                                price1,
+                                firstPrice,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
@@ -76,7 +82,7 @@ class FastFood extends StatelessWidget {
                             child: Material(
                               type: MaterialType.transparency,
                               child: Text(
-                                text1,
+                                firstTitle,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -100,22 +106,24 @@ class FastFood extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Hamburger(text2, price2)),
+                      builder: (context) => SingleProductPage(
+                          text: secondTitle, price: secondPrice)),
                 );
               },
               borderRadius: BorderRadius.circular(50),
               child: Hero(
-                tag: text2.toLowerCase(),
+                tag: secondTitle.toLowerCase(),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.6,
-                  width: MediaQuery.of(context).size.width * 0.6,
+                  height: 500,
+                  width: 270,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
                     ),
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
-                      image: AssetImage("assets/${text2.toLowerCase()}.jpeg"),
+                      image: AssetImage(
+                          "assets/images/${secondTitle.toLowerCase()}.jpeg"),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -137,7 +145,7 @@ class FastFood extends StatelessWidget {
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: Text(
-                                  price2,
+                                  secondPrice,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 50,
@@ -153,7 +161,7 @@ class FastFood extends StatelessWidget {
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: Text(
-                                  text2,
+                                  secondTitle,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 30,

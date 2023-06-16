@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:food/UI/home_page/home_page.dart';
+import 'package:food/screens/home_page/home_page.dart';
 import 'package:slide_action/slide_action.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -16,7 +16,7 @@ class StartPage extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/startPhoto.jpeg"),
+                image: AssetImage("assets/images/startPhoto.jpeg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -27,13 +27,13 @@ class StartPage extends StatelessWidget {
                   alignment: Alignment.center,
                   color: Colors.grey.withOpacity(0.1),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(
-                          bottom: MediaQuery.of(context).size.height * 0.5,
+                          top: 150,
                         ),
-                        child: const Text(
+                        child: Text(
                           "Foody",
                           style: TextStyle(
                             color: Color.fromARGB(255, 189, 170, 0),
@@ -42,8 +42,8 @@ class StartPage extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(
-                          bottom: MediaQuery.of(context).size.height * 0.05,
+                        padding: const EdgeInsets.only(
+                          bottom: 40,
                         ),
                         child: SlideAction(
                           trackBuilder: (context, state) {

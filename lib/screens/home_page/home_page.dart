@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/UI/home_page/components/fast_food.dart';
+import 'package:food/screens/home_page/components/food_list_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -229,9 +229,10 @@ class _HomePageState extends State<HomePage> {
           //main part
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.76,
-              width: MediaQuery.of(context).size.width * 0.9,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                bottom: 47,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -265,8 +266,11 @@ class _HomePageState extends State<HomePage> {
                           opacity: value,
                           child: Padding(
                             padding: EdgeInsets.only(left: value * 18),
-                            child: const FastFood(
-                                "Hamburger", "Cheeseburger", "€ 10", "€ 13"),
+                            child: const FoodList(
+                                firstTitle: "Hamburger",
+                                secondTitle: "Cheeseburger",
+                                firstPrice: "€ 10",
+                                secondPrice: "€ 13"),
                           ),
                         );
                       },
@@ -303,8 +307,11 @@ class _HomePageState extends State<HomePage> {
                           opacity: value,
                           child: Padding(
                             padding: EdgeInsets.only(left: value * 18),
-                            child: const FastFood(
-                                "Spaghetti", "Noodles", "€ 10", "€ 13"),
+                            child: const FoodList(
+                                firstTitle: "Spaghetti",
+                                secondTitle: "Noodles",
+                                firstPrice: "€ 10",
+                                secondPrice: "€ 13"),
                           ),
                         );
                       },
@@ -341,8 +348,11 @@ class _HomePageState extends State<HomePage> {
                           opacity: value,
                           child: Padding(
                             padding: EdgeInsets.only(left: value * 18),
-                            child: const FastFood(
-                                "Tunarolls", "Nigirizushi", "€ 10", "€ 13"),
+                            child: const FoodList(
+                                firstTitle: "Tunarolls",
+                                secondTitle: "Nigirizushi",
+                                firstPrice: "€ 10",
+                                secondPrice: "€ 13"),
                           ),
                         );
                       },
@@ -379,8 +389,11 @@ class _HomePageState extends State<HomePage> {
                           opacity: value,
                           child: Padding(
                             padding: EdgeInsets.only(left: value * 18),
-                            child: const FastFood(
-                                "CocaCola", "Fanta", "€ 10", "€ 13"),
+                            child: const FoodList(
+                                firstTitle: "CocaCola",
+                                secondTitle: "Fanta",
+                                firstPrice: "€ 10",
+                                secondPrice: "€ 13"),
                           ),
                         );
                       },
@@ -417,8 +430,11 @@ class _HomePageState extends State<HomePage> {
                           opacity: value,
                           child: Padding(
                             padding: EdgeInsets.only(left: value * 18),
-                            child: const FastFood(
-                                "Espresso", "Coffee", "€ 10", "€ 13"),
+                            child: const FoodList(
+                                firstTitle: "Espresso",
+                                secondTitle: "Coffee",
+                                firstPrice: "€ 10",
+                                secondPrice: "€ 13"),
                           ),
                         );
                       },

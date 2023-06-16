@@ -63,27 +63,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\startPhoto.jpeg
-    - assets\hamburger.jpeg
-    - assets\hamburgerTransparent.jpeg
-    - assets\cheeseburger.jpeg
-    - assets\cheeseburgerTransparent.jpeg
-    - assets\coffee.jpeg
-    - assets\coffeeTransparent.jpeg
-    - assets\espresso.jpeg
-    - assets\espressoTransparent.jpeg
-    - assets\nigirizushi.jpeg
-    - assets\nigirizushiTransparent.jpeg
-    - assets\tunarolls.jpeg
-    - assets\tunarollsTransparent.jpeg
-    - assets\spaghetti.jpeg
-    - assets\spaghettiTransparent.jpeg
-    - assets\noodles.jpeg
-    - assets\noodlesTransparent.jpeg
-    - assets\cocacola.jpeg
-    - assets\cocacolaTransparent.jpeg
-    - assets\fanta.jpeg
-    - assets\fantaTransparent.jpeg
+    - assets/images/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
