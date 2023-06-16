@@ -3,23 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:food/UI/single_product/hamburger/hamburger.dart';
 
-class FastFood extends StatefulWidget {
+class FastFood extends StatelessWidget {
   final String text1;
   final String text2;
   final String price1;
   final String price2;
   const FastFood(this.text1, this.text2, this.price1, this.price2, {super.key});
-
-  @override
-  // ignore: no_logic_in_create_state
-  State<FastFood> createState() => _FastFoodState();
-}
-
-class _FastFoodState extends State<FastFood> {
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +23,12 @@ class _FastFoodState extends State<FastFood> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) =>
-                        Hamburger(widget.text1, widget.price1)),
+                    builder: (context) => Hamburger(text1, price1)),
               );
             },
             borderRadius: BorderRadius.circular(50),
             child: Hero(
-              tag: widget.text1.toLowerCase(),
+              tag: text1.toLowerCase(),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.6,
                 width: MediaQuery.of(context).size.width * 0.6,
@@ -50,8 +38,7 @@ class _FastFoodState extends State<FastFood> {
                   ),
                   borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
-                    image:
-                        AssetImage("assets/${widget.text1.toLowerCase()}.jpeg"),
+                    image: AssetImage("assets/${text1.toLowerCase()}.jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -73,7 +60,7 @@ class _FastFoodState extends State<FastFood> {
                             child: Material(
                               type: MaterialType.transparency,
                               child: Text(
-                                widget.price1,
+                                price1,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
@@ -89,7 +76,7 @@ class _FastFoodState extends State<FastFood> {
                             child: Material(
                               type: MaterialType.transparency,
                               child: Text(
-                                widget.text1,
+                                text1,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -113,13 +100,12 @@ class _FastFoodState extends State<FastFood> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          Hamburger(widget.text2, widget.price2)),
+                      builder: (context) => Hamburger(text2, price2)),
                 );
               },
               borderRadius: BorderRadius.circular(50),
               child: Hero(
-                tag: widget.text2.toLowerCase(),
+                tag: text2.toLowerCase(),
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.6,
                   width: MediaQuery.of(context).size.width * 0.6,
@@ -129,8 +115,7 @@ class _FastFoodState extends State<FastFood> {
                     ),
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
-                      image: AssetImage(
-                          "assets/${widget.text2.toLowerCase()}.jpeg"),
+                      image: AssetImage("assets/${text2.toLowerCase()}.jpeg"),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -152,7 +137,7 @@ class _FastFoodState extends State<FastFood> {
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: Text(
-                                  widget.price2,
+                                  price2,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 50,
@@ -168,7 +153,7 @@ class _FastFoodState extends State<FastFood> {
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: Text(
-                                  widget.text2,
+                                  text2,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 30,

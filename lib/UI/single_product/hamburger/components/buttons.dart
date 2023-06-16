@@ -1,19 +1,8 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 
-class Buttons extends StatefulWidget {
+class Buttons extends StatelessWidget {
   const Buttons({super.key});
-
-  @override
-  // ignore: no_logic_in_create_state
-  State<Buttons> createState() => _ButtonState();
-}
-
-class _ButtonState extends State<Buttons> {
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,21 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class HamburgerTop extends StatefulWidget {
+class HamburgerTop extends StatelessWidget {
   final String text;
   final String price;
   const HamburgerTop(this.text, this.price, {super.key});
-
-  @override
-  // ignore: no_logic_in_create_state
-  State<HamburgerTop> createState() => _HamburgerTopState();
-}
-
-class _HamburgerTopState extends State<HamburgerTop> {
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +13,7 @@ class _HamburgerTopState extends State<HamburgerTop> {
       height: MediaQuery.of(context).size.height * 0.4,
       child: Scaffold(
         body: Hero(
-          tag: widget.text.toLowerCase(),
+          tag: text.toLowerCase(),
           child: Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -36,7 +25,7 @@ class _HamburgerTopState extends State<HamburgerTop> {
                 bottomRight: Radius.circular(30),
               ),
               image: DecorationImage(
-                image: AssetImage("assets/${widget.text.toLowerCase()}.jpeg"),
+                image: AssetImage("assets/${text.toLowerCase()}.jpeg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -91,7 +80,7 @@ class _HamburgerTopState extends State<HamburgerTop> {
                                 child: Material(
                                   type: MaterialType.transparency,
                                   child: Text(
-                                    widget.text,
+                                    text,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 30,
@@ -101,14 +90,14 @@ class _HamburgerTopState extends State<HamburgerTop> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
-                                  left: widget.text == "Cheeseburger"
+                                  left: text == "Cheeseburger"
                                       ? MediaQuery.of(context).size.width * 0.2
                                       : MediaQuery.of(context).size.width * 0.3,
                                 ),
                                 child: Material(
                                   type: MaterialType.transparency,
                                   child: Text(
-                                    widget.price,
+                                    price,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 50,

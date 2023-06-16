@@ -19,10 +19,6 @@ class _HamburgerState extends State<Hamburger> {
   final String price;
   _HamburgerState(this.text, this.price);
   String size = "m";
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {

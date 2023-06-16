@@ -5,14 +5,9 @@ import 'package:food/UI/home_page/home_page.dart';
 import 'package:slide_action/slide_action.dart';
 import 'package:page_transition/page_transition.dart';
 
-class StartPage extends StatefulWidget {
+class StartPage extends StatelessWidget {
   const StartPage({super.key});
 
-  @override
-  State<StartPage> createState() => _StartPagePageState();
-}
-
-class _StartPagePageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +93,6 @@ class _StartPagePageState extends State<StartPage> {
                                 duration: const Duration(
                                   milliseconds: 1000,
                                 ),
-                                childCurrent: widget,
                               ),
                             );
                           },
